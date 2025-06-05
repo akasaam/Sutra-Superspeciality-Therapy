@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Heart } from "lucide-react"
 
 export function LoadingScreen() {
   const [isVisible, setIsVisible] = useState(true)
@@ -38,13 +37,9 @@ export function LoadingScreen() {
     >
       <div className="text-center">
         <div className="mb-8">
-          <div className="relative">
-            <div className="h-20 w-20 rounded-full bg-sutra-blue/20 animate-pulse-slow mx-auto mb-4"></div>
-            <Heart className="h-8 w-8 text-sutra-blue absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse" />
-          </div>
+          <img src="/images/sutra-logo.png" alt="Sutra.care" className="h-24 mx-auto animate-pulse-slow" />
         </div>
 
-        <h1 className="font-sans text-4xl font-bold text-sutra-blue mb-2">Sutra</h1>
         <p className="font-sans text-sutra-gray text-lg">Caring for your little ones</p>
 
         <div className="mt-8 flex justify-center">

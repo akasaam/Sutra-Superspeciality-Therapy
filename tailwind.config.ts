@@ -97,6 +97,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Comfortaa", "system-ui", "sans-serif"],
+        secondary: ["Outfit", "system-ui", "sans-serif"],
       },
     },
   },

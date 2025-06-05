@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { MobileHeader } from "@/components/mobile-header"
 import { MobileNavigation } from "@/components/mobile-navigation"
+import { DesktopHeader } from "@/components/desktop-header"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { LoadingScreen } from "@/components/loading-screen"
 import { CacheConsent } from "@/components/cache-consent"
@@ -24,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
@@ -36,7 +37,8 @@ export default function RootLayout({
         <ScrollToTop />
         <div className="flex-1 pb-20 lg:pb-0">
           <MobileHeader />
-          <main className="lg:max-w-6xl lg:mx-auto lg:px-8">{children}</main>
+          <DesktopHeader />
+          <main className="lg:max-w-none">{children}</main>
         </div>
         <MobileNavigation />
         <CacheConsent />
